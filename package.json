@@ -1,0 +1,19 @@
+{
+	"name": "pnk_autocomplete",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"prefix-css": "postcss css/main.css --use autoprefixer -d css/",
+		"compress-css": "node-sass css/main.css css/main.css --output-style compressed",
+		"watch-sass": "node-sass scss/main.scss css/main.css --watch",
+		"compile-sass": "node-sass scss/main.scss css/main.css"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "^9.5.1",
+		"node-sass": "^4.11.0",
+		"postcss-cli": "^6.1.2"
+	}
+}

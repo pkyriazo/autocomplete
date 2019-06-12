@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  padding-bottom: 5rem; }
+
+#header {
+  margin: 0 0 1rem 0;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: #fefefe;
+  background-color: #282627;
+  text-align: center; }
+
+#search {
+  width: 100%;
+  margin: auto;
+  padding: 0.7rem; }
+  #search input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 3px solid #4fd9c5;
+    border-radius: 0.3rem; }
+
+#results {
+  width: 100%;
+  min-height: 5rem; }
+  #results #results-hint {
+    background-color: #ff6b6b;
+    line-height: 2.5;
+    color: #fff;
+    text-align: center; }
+  #results ul {
+    margin: 0.7rem;
+    padding: 0;
+    list-style: none; }
+    #results ul li {
+      cursor: pointer;
+      padding: 0.8rem 1rem;
+      background-color: #fff;
+      border-left: 1px solid #eaeaea;
+      border-right: 1px solid #eaeaea; }
+      #results ul li:hover {
+        background-color: #f8f8f8; }
+      #results ul li.selected {
+        background-color: #838383;
+        color: #fff; }
+      #results ul li:first-child {
+        border-top: 1px solid #eaeaea;
+        border-radius: 0.3rem 0.3rem 0 0; }
+      #results ul li:last-child {
+        border-bottom: 1px solid #eaeaea;
+        border-radius: 0 0 0.3rem 0.3rem; }
+      #results ul li:not(:last-child) {
+        border-bottom: 1px solid #eaeaea; }
+
+#search-btn {
+  width: 100%;
+  margin-top: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+  #search-btn a {
+    display: block;
+    width: 100%;
+    background-color: #0078ff;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0.3rem);
+    transition: all 0.1s ease-in-out; }
+    #search-btn a.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0); }
+
+#banner-left {
+  display: none; }
+
+@media screen and (min-width: 900px) {
+  .content {
+    display: table;
+    width: 100%; }
+  #banner-left,
+  main {
+    display: table-cell;
+    vertical-align: top;
+    padding: 2rem; }
+  #banner-left {
+    width: 25%; }
+    #banner-left div {
+      width: 100%;
+      height: 30rem;
+      border: 2px solid #bababa;
+      border-radius: 0.3rem; }
+  main {
+    width: 75%; }
+  #header {
+    text-align: left;
+    border-radius: 0.3rem; }
+  #search {
+    padding-left: 0;
+    padding-right: 0; }
+  #results ul {
+    margin: 0; }
+  #search-btn {
+    position: relative; }
+    #search-btn a {
+      display: inline-block;
+      border-radius: 0.3rem;
+      width: 20rem;
+      box-shadow: none; } }

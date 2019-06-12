@@ -86,7 +86,7 @@ function resultClicked(e) {
 		searchInput.text(resultText);
 		searchInput.val(resultText);
 		searchBtn.hasClass('visible') ? null : searchBtn.addClass('visible');
-		searchBtn.attr('href', 'http://google.com/search?q=' + resultText);
+		searchBtn.attr('href', 'https://google.com/search?q=' + resultText);
 	}
 }
 
@@ -116,18 +116,17 @@ function search(inputString) {
 jQuery(document).ready(function($) {
 	checkScreen();
 	searchInput.keyup(function(event) {
-		// Clear any previously initiated timeout
-		clearTimeout(searchTimeout);
-
 		var inputString = searchInput.val();
-
+		clearTimeout(searchTimeout);
 		clearResults();
+		searchBtn.removeClass('visible');
+		searchBtn.attr('href', '#');
 		resultsHint.text('');
 		if (inputString.length > 1) {
 			resultsHint.text('Searching');
 			searchTimeout = setTimeout(function() { search(inputString) }, KEYUP_TIMEOUT);
 		} else if (inputString.length == 1) {
-			resultsHint.text('Type at least 2 characters');
+			resultsHint.text('Type more than 1 character');
 		}
 	});
 	$(window).resize(function(event) {

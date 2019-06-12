@@ -76,6 +76,7 @@ body {
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	z-index: 999;
 	a {
 		display: block;
 		width: 100%;
@@ -99,23 +100,53 @@ body {
 	}
 }
 
-#banner-left {
+#banner {
 	display: none;
+	position: relative;
+	span {
+		display: block;
+		padding: 1rem;
+	}
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 680px) {
+	.content {
+		display: block;
+		width: 100%;
+	}
+	#banner,
+	main {
+		display: block;
+	}
+	#banner {
+		width: 100%;
+		padding: 2rem;
+		div {
+			width: 100%;
+			height: 10rem;
+			border: 2px solid #bababa;
+			border-radius: 0.3rem;
+		}
+	}
+	main {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1040px) {
 	.content {
 		display: table;
 		width: 100%;
 	}
-	#banner-left,
+	#banner,
 	main {
 		display: table-cell;
 		vertical-align: top;
 		padding: 2rem;
 	}
-	#banner-left {
+	#banner {
 		width: 25%;
+		float: left;
 		div {
 			width: 100%;
 			height: 30rem;
@@ -125,6 +156,7 @@ body {
 	}
 	main {
 		width: 75%;
+		float: right;
 	}
 	#header {
 		text-align: left;

@@ -76,7 +76,7 @@ body {
     font-weight: bold;
     font-size: 1.1rem;
     padding: 0.8rem;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
     text-decoration: none;
     text-align: center;
     opacity: 0;

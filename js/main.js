@@ -11,7 +11,7 @@ var searchTimeout,
 	screenTarget;
 
 function checkScreen() {
-	$('#banner-left').css('display') == 'none' ? screenTarget = 0 : screenTarget = 1;
+	$('#banner').css('display') == 'none' ? screenTarget = 0 : screenTarget = 1;
 }
 
 // Detect the search value language
